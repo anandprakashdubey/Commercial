@@ -23,7 +23,7 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-ENV MONGO_URL=mongodb://mymongo:27017
-ENV MONGO_INITDB_DATABASE=BookStore
+ENV MONGO_URL=mongodb://mongoDb:27017
+ENV MONGO_INITDB_DATABASE=CatalogDb
 
 ENTRYPOINT ["dotnet", "Commercial.Catalog.API.dll"]
